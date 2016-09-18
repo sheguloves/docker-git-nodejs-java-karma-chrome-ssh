@@ -33,6 +33,7 @@ RUN apt-get update && apt-get install -y xvfb chromium-browser \
 ADD xvfb.sh /etc/init.d/xvfb
 ADD entrypoint.sh /entrypoint.sh
 
+# following command may not work, which means envirement may not exist, please use proper command replace
 ENV DISPLAY :99.0
 ENV CHROME_BIN=/usr/bin/chromium-browser
 
